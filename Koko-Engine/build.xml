@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Koko-Engine">
+    <property environment="env"/>
+    <property name="Sandbox.location" value="../Sandbox"/>
+    <property name="ECLIPSE_HOME" value="../../../../Users/Work/eclipse/java-2020-03/eclipse/"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="Koko-Engine.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="Vendor/JSFML/jsfml.jar"/>
+        <pathelement location="Vendor/Log4j/log4j-1.2.17.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/joml-1.9.24.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-assimp-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-assimp-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-assimp-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-assimp-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-assimp-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-assimp-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-assimp.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-bgfx-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-bgfx-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-bgfx-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-bgfx-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-bgfx-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-bgfx-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-bgfx.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-cuda.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-egl.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-glfw-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-glfw-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-glfw-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-glfw-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-glfw-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-glfw-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-glfw.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jawt.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jemalloc-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jemalloc-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jemalloc-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jemalloc-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jemalloc-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jemalloc-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-jemalloc.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-libdivide-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-libdivide-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-libdivide-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-libdivide-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-libdivide-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-libdivide-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-libdivide.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-llvm-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-llvm-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-llvm-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-llvm-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-llvm-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-llvm-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-llvm.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lmdb-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lmdb-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lmdb-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lmdb-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lmdb-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lmdb-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lmdb.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lz4-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lz4-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lz4-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lz4-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lz4-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lz4-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-lz4.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-meow-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-meow-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-meow-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-meow-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-meow-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-meow.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nanovg-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nanovg-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nanovg-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nanovg-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nanovg-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nanovg-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nanovg.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nfd-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nfd-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nfd-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nfd-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nfd.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nuklear-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nuklear-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nuklear-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nuklear-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nuklear-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nuklear-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-nuklear.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-odbc.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openal-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openal-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openal-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openal-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openal-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openal-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openal.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opencl.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengl-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengl-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengl-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengl-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengl-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengl-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengl.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengles-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengles-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengles-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengles-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengles-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengles-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opengles.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openvr-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openvr-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openvr-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openvr-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-openvr.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opus-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opus-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opus-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opus-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opus-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opus-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-opus.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-ovr-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-ovr-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-ovr.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-par-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-par-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-par-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-par-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-par-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-par-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-par.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-remotery-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-remotery-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-remotery-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-remotery-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-remotery-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-remotery-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-remotery.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-rpmalloc-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-rpmalloc-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-rpmalloc-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-rpmalloc-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-rpmalloc-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-rpmalloc-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-rpmalloc.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-shaderc-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-shaderc-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-shaderc-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-shaderc-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-shaderc-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-shaderc-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-shaderc.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-sse-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-sse-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-sse-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-sse-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-sse.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-stb-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-stb-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-stb-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-stb-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-stb-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-stb-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-stb.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyexr-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyexr-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyexr-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyexr-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyexr-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyexr-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyexr.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyfd-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyfd-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyfd-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyfd-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyfd-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyfd-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tinyfd.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tootle-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tootle-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tootle-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tootle-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-tootle.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vma-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vma-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vma-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vma-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vma-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vma-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vma.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vulkan-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-vulkan.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-xxhash-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-xxhash-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-xxhash-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-xxhash-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-xxhash-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-xxhash-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-xxhash.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-yoga-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-yoga-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-yoga-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-yoga-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-yoga-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-yoga-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-yoga.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-zstd-natives-linux-arm32.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-zstd-natives-linux-arm64.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-zstd-natives-linux.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-zstd-natives-macos.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-zstd-natives-windows-x86.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-zstd-natives-windows.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl-zstd.jar"/>
+        <pathelement location="Vendor/LWJGL_3.2.2/lwjgl.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="Koko-Engine.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects">
+        <ant antfile="build.xml" dir="${Sandbox.location}" inheritAll="false" target="clean"/>
+        <ant antfile="build.xml" dir="${Sandbox.location}" inheritAll="false" target="build">
+            <propertyset>
+                <propertyref name="build.compiler"/>
+            </propertyset>
+        </ant>
+    </target>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>
