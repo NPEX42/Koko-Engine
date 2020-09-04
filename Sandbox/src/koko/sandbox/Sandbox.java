@@ -18,6 +18,7 @@ public class Sandbox extends KokoApp {
 	};
 	@Override
 	public boolean OnUpdate(float ts) {
+		Background(Color.BLUE);
 		DrawMeshData(vertices, tris);
 		return true;
 	}
