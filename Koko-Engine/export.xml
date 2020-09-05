@@ -3,7 +3,7 @@
   <property name="workspaceHome" location=".." />
   <property name="distDir" location="${projectHome}/dist" />
   <property name="koko.name" value="Koko-Engine" />
-  <property name="koko.version" value="0.1.3" />
+  <property name="koko.version" value="AUTO-BUILD" />
   <target name="createLib">
   	<mkdir dir="${distDir}" />
     <jar destfile="${distDir}/${koko.name}-${koko.version}.jar" basedir="${projectHome}/bin">
