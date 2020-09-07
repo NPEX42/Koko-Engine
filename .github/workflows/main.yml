@@ -15,5 +15,5 @@ jobs:
       - name: Build with Ant
         run: |
           ls
-          cd "Koko Engine"
+          cd "Koko-Engine"
           ant -noinput -buildfile  build.xml
