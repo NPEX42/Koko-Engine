@@ -34,7 +34,7 @@ public class Sandbox extends KokoApp {
 	}
 
 	public static void main(String[] args) {
-		new Sandbox().Init(1080, 720, "Sandbox - Koko Engine", true);
+		new Sandbox().InitSFML(1080, 720, "Sandbox - Koko Engine", true);
 	}
 
 

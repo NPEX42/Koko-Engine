@@ -1,9 +1,11 @@
 package koko.display;
 import static org.lwjgl.glfw.GLFW.*;
 import org.apache.log4j.Logger;
+import org.jsfml.window.event.Event;
 import org.lwjgl.opengl.GL;
 
 import koko.api.RenderingAPI;
+import koko.events.EventSystem;
 import koko.api.HostWindowType;
 public class GLFW_Window extends Window {
 	private static final Logger logger = Logger.getLogger(GLFW_Window.class);
@@ -27,6 +29,10 @@ public class GLFW_Window extends Window {
 			isLinked = false;
 			return false;
 		}
+		
+		glfwSetWindowCloseCallback(windowID, EventSystem::glfw_DispatchCloseEvent);
+		glfwSetWindowSizeCallback(windowID, EventSystem::glfw_DispatchResizeEvent);
+		
 		return true;
 	}
 

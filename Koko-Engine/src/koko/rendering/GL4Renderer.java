@@ -1,11 +1,16 @@
 package koko.rendering;
 import static org.lwjgl.opengl.GL46.*;
 
+import koko.events.EventSystem;
 import koko.opengl.GLIndexBuffer;
 import koko.opengl.GLVertexArray;
 import koko.opengl.GLVertexBuffer;
 public class GL4Renderer implements IRenderer {
 
+	static {
+		EventSystem.RegisterResizeHandler(GL4Renderer::OnResize);
+	}
+	
 	@Override
 	public void ClearColor(float r, float g, float b, float a) {
 		glClearColor(r, g, b, a);
@@ -30,6 +35,10 @@ public class GL4Renderer implements IRenderer {
 		buffer.Delete();
 		tris.Delete();
 		vao.Delete();
+	}
+	
+	private static void OnResize(int w, int h) {
+		glViewport(0, 0, w, h);
 	}
 
 }

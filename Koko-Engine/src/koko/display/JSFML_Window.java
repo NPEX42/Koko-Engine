@@ -9,6 +9,7 @@ import org.jsfml.window.event.Event;
 import org.lwjgl.opengl.GL;
 
 import koko.api.RenderingAPI;
+import koko.events.EventSystem;
 import koko.api.HostWindowType;
 
 public class JSFML_Window extends Window {
@@ -39,6 +40,7 @@ public class JSFML_Window extends Window {
 		while((event = window.pollEvent()) != null) {
 			switch(event.type) {
 			case CLOSED: return false;
+			case RESIZED: EventSystem.DispatchResizeEvent(event.asSizeEvent().size.x, event.asSizeEvent().size.y); break;
 			default: return true;
 			}
 		}
@@ -49,6 +51,7 @@ public class JSFML_Window extends Window {
 	public boolean CloseDisplay() {
 		window.close();
 		logger.info("Closed JSFML Window...");
+		EventSystem.DispatchCloseEvent();
 		return true;
 	}
 

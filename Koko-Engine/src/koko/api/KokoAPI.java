@@ -6,6 +6,10 @@ import java.io.File;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.jsfml.window.event.Event;
+
+import koko.events.EventSystem;
+import koko.events.ICloseHandler;
 
 public abstract class KokoAPI {
 	private RenderingAPI rendering;
@@ -74,6 +78,10 @@ public abstract class KokoAPI {
 	
 	public void DrawMeshData(float[] vertices, int[] triangles) {
 		rendering.Draw(vertices, triangles);
+	}
+	
+	public void RegisterEventHandler(ICloseHandler handler) {
+		EventSystem.RegisterCloseHandler(handler);
 	}
 	
 	public void LogInfo(String message) {
