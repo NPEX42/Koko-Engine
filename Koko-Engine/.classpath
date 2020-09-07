@@ -227,5 +227,6 @@
 	<classpathentry kind="lib" path="Vendor/LWJGL_3.2.2/lwjgl-zstd-natives-windows.jar"/>
 	<classpathentry kind="lib" path="Vendor/LWJGL_3.2.2/lwjgl-zstd.jar"/>
 	<classpathentry kind="lib" path="Vendor/LWJGL_3.2.2/lwjgl.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Core"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

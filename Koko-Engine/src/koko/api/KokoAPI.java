@@ -1,6 +1,7 @@
 package koko.api;
 
 import java.awt.Color;
+import java.io.File;
 
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Logger;
@@ -19,9 +20,9 @@ public abstract class KokoAPI {
 	public abstract boolean OnCreate();
 	
 	static {
-		try {
+		if(new File("assets/l4j.txt").exists()) {
 			PropertyConfigurator.configure("assets/l4j.txt");
-		} catch (Exception e) {
+		} else {
 			BasicConfigurator.configure();
 		}
 	}
