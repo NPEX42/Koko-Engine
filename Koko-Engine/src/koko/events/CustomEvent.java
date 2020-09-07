@@ -1,12 +1,20 @@
 package koko.events;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Stack;
 
 public class CustomEvent<T> {
-	public String name;
-	public int ID;
+	protected String name;
+	private int ID;
+	
+	public CustomEvent(String name) {
+		ID = name.hashCode();
+		this.name = name;
+	}
+	
+	public CustomEvent(int ID) {
+		name = "UNAMED_EVENT";
+		this.ID = ID;
+	}
 	
 	public Stack<T> payload = new Stack<T>();
 	
