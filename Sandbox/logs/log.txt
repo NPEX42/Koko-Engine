@@ -1,9 +1,99 @@
-07:58:09.337 - [main/INFO] - Creating Window...
-07:58:10.183 - [main/INFO] - Opened A GLFW Window...
-07:58:10.204 - [main/INFO] - Added Resize Handler (0x0004)
-07:58:10.207 - [main/INFO] - Renderer Version: 4.6.0 NVIDIA 442.19 | GeForce GTX 1050/PCIe/SSE2
-07:58:10.214 - [main/WARN] - Shader Compiled Successfully...
-07:58:10.214 - [main/WARN] - Shader Compiled Successfully...
-07:58:11.301 - [main/INFO] - Frame Delta: 17ms - 170 MB Free - Tick #60
-07:58:11.777 - [main/INFO] - Dispatching Close Event...
-07:58:11.794 - [main/INFO] - Closed GLFW Window...
+08:37:33.324 - [main/INFO] - Creating Window...
+08:37:34.273 - [main/INFO] - Opened A GLFW Window...
+08:37:34.290 - [main/INFO] - Added Resize Handler (0x0004)
+08:37:34.293 - [main/INFO] - Renderer Version: 4.6.0 NVIDIA 442.19 | GeForce GTX 1050/PCIe/SSE2
+08:37:34.301 - [main/WARN] - Shader Compiled Successfully...
+08:37:34.301 - [main/WARN] - Shader Compiled Successfully...
+08:37:35.327 - [main/INFO] - Frame Delta: 24ms - 170 MB Free - Tick #60
+08:37:36.382 - [main/INFO] - Frame Delta: 15ms - 170 MB Free - Tick #120
+08:37:37.421 - [main/INFO] - Frame Delta: 17ms - 170 MB Free - Tick #180
+08:37:38.555 - [main/INFO] - Frame Delta: 16ms - 170 MB Free - Tick #240
+08:37:39.554 - [main/INFO] - Frame Delta: 17ms - 170 MB Free - Tick #300
+08:37:40.553 - [main/INFO] - Frame Delta: 15ms - 170 MB Free - Tick #360
+08:37:42.370 - [main/INFO] - Frame Delta: 17ms - 170 MB Free - Tick #420
+08:37:43.371 - [main/INFO] - Frame Delta: 18ms - 170 MB Free - Tick #480
+08:37:44.504 - [main/INFO] - Frame Delta: 16ms - 170 MB Free - Tick #540
+08:37:45.504 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #600
+08:37:46.504 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #660
+08:37:47.503 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #720
+08:37:48.504 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #780
+08:37:49.503 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #840
+08:37:50.504 - [main/INFO] - Frame Delta: 19ms - 169 MB Free - Tick #900
+08:37:51.506 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #960
+08:37:54.236 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1020
+08:37:55.236 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1080
+08:37:56.235 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #1140
+08:37:57.235 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #1200
+08:37:58.238 - [main/INFO] - Frame Delta: 13ms - 169 MB Free - Tick #1260
+08:37:59.270 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1320
+08:38:00.268 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1380
+08:38:01.268 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #1440
+08:38:02.270 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #1500
+08:38:03.286 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #1560
+08:38:04.285 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #1620
+08:38:05.286 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1680
+08:38:06.285 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1740
+08:38:07.284 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1800
+08:38:08.351 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #1860
+08:38:09.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #1920
+08:38:10.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #1980
+08:38:11.353 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #2040
+08:38:12.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2100
+08:38:13.352 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2160
+08:38:14.351 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #2220
+08:38:15.352 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2280
+08:38:16.350 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2340
+08:38:17.352 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #2400
+08:38:18.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2460
+08:38:19.352 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2520
+08:38:20.352 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2580
+08:38:21.352 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #2640
+08:38:22.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2700
+08:38:23.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2760
+08:38:24.350 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2820
+08:38:25.350 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #2880
+08:38:26.353 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #2940
+08:38:27.350 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #3000
+08:38:28.349 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #3060
+08:38:29.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3120
+08:38:30.350 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3180
+08:38:31.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3240
+08:38:32.349 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3300
+08:38:33.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3360
+08:38:34.349 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3420
+08:38:35.350 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3480
+08:38:36.351 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3540
+08:38:37.351 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #3600
+08:38:38.350 - [main/INFO] - Frame Delta: 15ms - 169 MB Free - Tick #3660
+08:38:39.348 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #3720
+08:38:40.349 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3780
+08:38:41.350 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3840
+08:38:42.349 - [main/INFO] - Frame Delta: 17ms - 169 MB Free - Tick #3900
+08:38:43.350 - [main/INFO] - Frame Delta: 16ms - 169 MB Free - Tick #3960
+08:38:44.349 - [main/INFO] - Frame Delta: 18ms - 169 MB Free - Tick #4020
+08:38:45.349 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #4080
+08:38:46.350 - [main/INFO] - Frame Delta: 17ms - 168 MB Free - Tick #4140
+08:38:47.353 - [main/INFO] - Frame Delta: 22ms - 168 MB Free - Tick #4200
+08:38:48.349 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #4260
+08:38:49.348 - [main/INFO] - Frame Delta: 17ms - 168 MB Free - Tick #4320
+08:38:50.348 - [main/INFO] - Frame Delta: 17ms - 168 MB Free - Tick #4380
+08:38:51.348 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #4440
+08:38:52.349 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #4500
+08:38:53.349 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #4560
+08:38:54.347 - [main/INFO] - Frame Delta: 14ms - 168 MB Free - Tick #4620
+08:38:55.349 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #4680
+08:38:56.348 - [main/INFO] - Frame Delta: 18ms - 168 MB Free - Tick #4740
+08:38:57.349 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #4800
+08:38:58.349 - [main/INFO] - Frame Delta: 17ms - 168 MB Free - Tick #4860
+08:38:59.348 - [main/INFO] - Frame Delta: 18ms - 168 MB Free - Tick #4920
+08:39:00.347 - [main/INFO] - Frame Delta: 15ms - 168 MB Free - Tick #4980
+08:39:01.349 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #5040
+08:39:02.348 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #5100
+08:39:03.348 - [main/INFO] - Frame Delta: 17ms - 168 MB Free - Tick #5160
+08:39:04.348 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #5220
+08:39:05.347 - [main/INFO] - Frame Delta: 17ms - 168 MB Free - Tick #5280
+08:39:06.348 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #5340
+08:39:07.346 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #5400
+08:39:08.348 - [main/INFO] - Frame Delta: 16ms - 168 MB Free - Tick #5460
+08:39:09.107 - [main/INFO] - Dispatching Close Event...
+08:39:09.126 - [main/INFO] - Closed GLFW Window...

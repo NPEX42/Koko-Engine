@@ -24,3 +24,4 @@ hs_err_pid*
 /.metadata/
 !/Vendor/**
 !/dist/**
+Sandbox/logs/log.txt
