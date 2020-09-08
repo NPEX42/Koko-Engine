@@ -1,5 +1,8 @@
 package koko.rendering;
 
+import java.util.HashMap;
+
+import org.joml.*;
 
 public abstract class Shader extends Bindable {
 	protected int programID, vertexID, fragmentID;
@@ -18,4 +21,16 @@ public abstract class Shader extends Bindable {
 	protected abstract boolean HasValidSource();
 	
 	protected abstract void GenerateShaders();
+	
+	protected abstract int GetUniformByName(String name);
+	
+	public abstract void UploadMat4(String name, Matrix4f mat);
+	public abstract void UploadMat3(String name, Matrix3f mat);
+	public abstract void UploadMat2(String name, Matrix2f mat);
+	
+	public abstract void UploadVec4(String name, Vector4f vec);
+	public abstract void UploadVec3(String name, Vector3f vec);
+	public abstract void UploadVec2(String name, Vector2f vec);
+	
+	public abstract HashMap<String, Integer> GetUniformList();
 }

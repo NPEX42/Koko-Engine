@@ -5,6 +5,11 @@ import koko.rendering.Shader;
 import np.core.IO;
 
 import static org.lwjgl.opengl.GL46.*;
+
+import java.util.HashMap;
+
+import org.joml.*;
+
 public class GLShader extends Shader {
 
 	public GLShader(String vertexPath, String fragmentPath) {
@@ -70,6 +75,48 @@ public class GLShader extends Shader {
 		vertexID = glCreateShader(GL_VERTEX_SHADER);
 		fragmentID = glCreateShader(GL_FRAGMENT_SHADER);
 		programID = glCreateProgram();
+	}
+
+	@Override
+	protected int GetUniformByName(String name) {
+		return glGetUniformLocation(programID, name);
+	}
+
+	@Override
+	public void UploadMat4(String name, Matrix4f mat) {
+		glUniformMatrix4fv(GetUniformByName(name), false, mat.get(new float[16]));
+	}
+
+	@Override
+	public void UploadMat3(String name, Matrix3f mat) {
+		glUniformMatrix3fv(GetUniformByName(name), false, mat.get(new float[9]));
+	}
+
+	@Override
+	public void UploadMat2(String name, Matrix2f mat) {
+		glUniformMatrix2fv(GetUniformByName(name), false, mat.get(new float[4]));
+	}
+
+	@Override
+	public void UploadVec4(String name, Vector4f vec) {
+		glUniform4f(GetUniformByName(name), vec.x, vec.y, vec.z, vec.w);
+	}
+
+	@Override
+	public void UploadVec3(String name, Vector3f vec) {
+		glUniform3f(GetUniformByName(name), vec.x, vec.y, vec.z);
+		
+	}
+
+	@Override
+	public void UploadVec2(String name, Vector2f vec) {
+		glUniform2f(GetUniformByName(name), vec.x, vec.y);
+		
+	}
+
+	@Override
+	public HashMap<String, Integer> GetUniformList() {
+		return null;
 	}
 
 }

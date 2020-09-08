@@ -21,7 +21,17 @@ public class IO {
 		try {
 			return LoadString(new FileInputStream(path));
 		} catch(Exception ex) {
-			return null;
+			InputStream stream = IO.class.getResourceAsStream(path);
+			if(stream == null) {
+				stream = IO.class.getClassLoader().getResourceAsStream(path);
+			}
+			
+			if(stream != null) {
+				return LoadString(stream);
+			} else {
+				return null;
+			}
 		}
 	}
+	
 }
