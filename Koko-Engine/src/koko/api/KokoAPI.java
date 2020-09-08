@@ -36,6 +36,7 @@ public abstract class KokoAPI {
 		logger.info("Creating Window...");
 		display.CreateDisplay(width, height, title, vsync);
 		rendering = RenderingAPI.Create();
+		logger.info("Renderer Version: "+rendering.GetRendererVersion());
 		GameLoop();
 	}
 	
@@ -78,6 +79,10 @@ public abstract class KokoAPI {
 	
 	public void DrawMeshData(float[] vertices, int[] triangles) {
 		rendering.Draw(vertices, triangles);
+	}
+	
+	public void LoadShader(String vertexPath, String fragmentPath) {
+		rendering.LoadShader(vertexPath, fragmentPath);
 	}
 	
 	public void RegisterEventHandler(ICloseHandler handler) {

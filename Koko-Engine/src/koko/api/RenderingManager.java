@@ -20,5 +20,13 @@ public class RenderingManager extends RenderingAPI {
 	protected void Draw(float[] vertices, int[] triangles) {
 		renderer.Draw(vertices, triangles);
 	}
+	@Override
+	protected void LoadShader(String vertexPath, String fragmentPath) {
+		renderer.SetActiveShader(vertexPath,fragmentPath);
+	}
+	@Override
+	protected String GetRendererVersion() {
+		return renderer.GetRendererVersion();
+	}
 
 }

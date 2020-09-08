@@ -3,10 +3,13 @@ import static org.lwjgl.opengl.GL46.*;
 
 import koko.events.EventSystem;
 import koko.opengl.GLIndexBuffer;
+import koko.opengl.GLShader;
 import koko.opengl.GLVertexArray;
 import koko.opengl.GLVertexBuffer;
 public class GL4Renderer implements IRenderer {
 
+	private GLShader shader;
+	
 	static {
 		EventSystem.RegisterResizeHandler(GL4Renderer::OnResize);
 	}
@@ -30,6 +33,10 @@ public class GL4Renderer implements IRenderer {
 		tris.Regenerate();
 		tris.SetTriangles(triangles);
 		
+		if(shader != null) {
+			shader.Bind();
+		}
+		
 		glDrawElements(GL_TRIANGLES, tris.getVertexCount(), GL_UNSIGNED_INT, 0);
 		
 		buffer.Delete();
@@ -39,6 +46,16 @@ public class GL4Renderer implements IRenderer {
 	
 	private static void OnResize(int w, int h) {
 		glViewport(0, 0, w, h);
+	}
+
+	@Override
+	public void SetActiveShader(String vertexPath, String fragmentPath) {
+		shader = new GLShader(vertexPath, fragmentPath);
+	}
+
+	@Override
+	public String GetRendererVersion() {
+		return glGetString(GL_VERSION)+" | "+glGetString(GL_RENDERER);
 	}
 
 }

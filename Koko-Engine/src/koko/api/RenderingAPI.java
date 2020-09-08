@@ -13,4 +13,8 @@ public abstract class RenderingAPI {
 	}
 
 	protected abstract void Draw(float[] vertices, int[] triangles);
+
+	protected abstract void LoadShader(String vertexPath, String fragmentPath);
+
+	protected abstract String GetRendererVersion();
 }

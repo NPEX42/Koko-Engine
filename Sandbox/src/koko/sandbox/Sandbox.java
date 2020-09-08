@@ -30,6 +30,7 @@ public class Sandbox extends KokoApp {
 
 	@Override
 	public boolean OnCreate() {
+		LoadShader("assets/shaders/basic.v", "assets/shaders/basic.f");
 		return true;
 	}
 
