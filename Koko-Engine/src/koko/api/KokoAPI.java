@@ -2,14 +2,19 @@ package koko.api;
 
 import java.awt.Color;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.graalvm.compiler.replacements.InstanceOfSnippetsTemplates.MaterializationUsageReplacer;
 import org.jsfml.window.event.Event;
 
 import koko.events.EventSystem;
 import koko.events.ICloseHandler;
+import koko.events.IResizeHandler;
 
 public abstract class KokoAPI {
 	private RenderingAPI rendering;
@@ -37,6 +42,7 @@ public abstract class KokoAPI {
 		display.CreateDisplay(width, height, title, vsync);
 		rendering = RenderingAPI.Create();
 		logger.info("Renderer Version: "+rendering.GetRendererVersion());
+		EngineLogger.coreLogger.setLevel(Level.INFO);
 		GameLoop();
 	}
 	
@@ -47,7 +53,7 @@ public abstract class KokoAPI {
 		
 		while(true) {
 			tp1 = System.currentTimeMillis();
-			if(!OnUpdate((tp2 - tp1) / 1000f)) break;
+			if(!OnUpdate((tp2 - tp1))) break;
 			if(!display.UpdateDisplay()) break;
 			frameCount++;
 			tp2 = System.currentTimeMillis();
@@ -81,15 +87,61 @@ public abstract class KokoAPI {
 		rendering.Draw(vertices, triangles);
 	}
 	
+	public void DrawMeshData(MeshData data) {
+		if(data == null) return;
+		if(data.triangles == null) {
+			rendering.DrawArrays(data.positions);
+		} else {
+			DrawMeshData(data.positions, data.triangles);
+		}
+	}
+	
+	public MeshData LoadOBJ(String path) {
+		try {
+			return ObjLoader.LoadFromStream(new FileInputStream(path));
+		} catch (FileNotFoundException e) {
+			return null;
+		}
+	}
+	
 	public void LoadShader(String vertexPath, String fragmentPath) {
 		rendering.LoadShader(vertexPath, fragmentPath);
 	}
 	
-	public void RegisterEventHandler(ICloseHandler handler) {
+	public void RegisterCloseEventHandler(ICloseHandler handler) {
 		EventSystem.RegisterCloseHandler(handler);
+	}
+	
+	public void RegisterResizeEventHandler(IResizeHandler handler) {
+		EventSystem.RegisterResizeHandler(handler);
+	} 
+	
+	public void UploadMaterial(Material mat) {
+		rendering.UploadMaterial(mat);
+	}
+	
+	public void UploadPerspectiveProj(float aspect, float fovy, float near, float far) {
+		rendering.UploadPerspectiveProj(aspect, fovy, near, far);
+	}
+	
+	public void SetTransform(float x, float y, float z) {
+		rendering.UploadTransform(x,y,z,0,0,0,1,1,1);
+	}
+	
+	public void SetTransform(float x, float y, float z, float xr, float yr, float zr) {
+		rendering.UploadTransform(x,y,z,xr,yr,zr,1,1,1);
+	}
+	
+	public void SetTransform(float x, float y, float z, float xr, float yr, float zr, float xs, float ys, float zs) {
+		rendering.UploadTransform(x,y,z,xr,yr,zr,xs,ys,zs);
 	}
 	
 	public void LogInfo(String message) {
 		logger.info(message);
 	}
+	
+	public int ScreenWidth() { return display.ScreenWidth(); }
+	public int ScreenHeight() { return display.ScreenHeight(); }
+	
+	public float ScreenAspect() { return (float) ScreenWidth() / (float) ScreenHeight(); }
 }

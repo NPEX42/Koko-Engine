@@ -1,5 +1,6 @@
 package koko.rendering;
 
+import java.awt.Color;
 import java.util.HashMap;
 
 import org.joml.*;
@@ -32,5 +33,12 @@ public abstract class Shader extends Bindable {
 	public abstract void UploadVec3(String name, Vector3f vec);
 	public abstract void UploadVec2(String name, Vector2f vec);
 	
+	public abstract void UploadColor(String name, Color c);
+	
 	public abstract HashMap<String, Integer> GetUniformList();
+	
+	public static final String 
+	KOKO_UNIFORM_PROJ = "_Proj",
+	KOKO_UNIFORM_TRANSFORM = "_Transform",
+	KOKO_UNIFORM_TINT = "_Tint";
 }

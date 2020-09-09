@@ -6,4 +6,6 @@ public abstract class DisplayAPI {
 	public abstract void DestroyDisplay();
 	protected abstract void CreateDisplay_GLFW(int width, int height, String title, boolean vsync);
 	protected abstract void CreateDisplay_SFML(int width, int height, String title, boolean vsync);
+	protected abstract int ScreenWidth();
+	protected abstract int ScreenHeight();
 }

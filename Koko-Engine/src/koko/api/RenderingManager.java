@@ -28,5 +28,21 @@ public class RenderingManager extends RenderingAPI {
 	protected String GetRendererVersion() {
 		return renderer.GetRendererVersion();
 	}
+	@Override
+	protected void UploadMaterial(Material mat) {
+		renderer.UploadMaterial(mat);
+	}
+	@Override
+	protected void UploadPerspectiveProj(float aspect, float fovy, float near, float far) {
+		renderer.SetPerspective(aspect, fovy, near, far);
+	}
+	@Override
+	protected void UploadTransform(float x, float y, float z, float xr, float yr, float zr, float xs, float ys, float zs) {
+		renderer.SetTransform(x,y,z,xr,yr,zr,xs,ys,zs);
+	}
+	@Override
+	protected void DrawArrays(float[] positions) {
+		renderer.Draw(positions);
+	}
 
 }

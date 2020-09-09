@@ -13,7 +13,8 @@ public class IO {
 			}
 			return buffer.toString();
 		} catch(Exception ex) {
-			return null;
+			ex.printStackTrace();
+			return "";
 		}
 	}
 	

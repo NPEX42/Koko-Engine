@@ -17,4 +17,13 @@ public abstract class RenderingAPI {
 	protected abstract void LoadShader(String vertexPath, String fragmentPath);
 
 	protected abstract String GetRendererVersion();
+
+	protected abstract void UploadMaterial(Material mat);
+
+	protected abstract void UploadPerspectiveProj(float aspect, float fovy, float near, float far);
+
+	protected abstract void UploadTransform(float x, float y, float z, float xr, float yr, float zr, float xs, float ys, float zs);
+
+	protected abstract void DrawArrays(float[] positions);
+
 }

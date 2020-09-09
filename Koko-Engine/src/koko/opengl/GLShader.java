@@ -6,6 +6,7 @@ import np.core.IO;
 
 import static org.lwjgl.opengl.GL46.*;
 
+import java.awt.Color;
 import java.util.HashMap;
 
 import org.joml.*;
@@ -79,6 +80,7 @@ public class GLShader extends Shader {
 
 	@Override
 	protected int GetUniformByName(String name) {
+		if(glGetUniformLocation(programID, name) == -1) EngineLogger.coreLogger.error("Unable To Locate Uniform '"+name+"'...");
 		return glGetUniformLocation(programID, name);
 	}
 
@@ -117,6 +119,16 @@ public class GLShader extends Shader {
 	@Override
 	public HashMap<String, Integer> GetUniformList() {
 		return null;
+	}
+
+	@Override
+	public void UploadColor(String name, Color c) {
+		Vector4f v = new Vector4f();
+		v.x = c.getRed() / 255f;
+		v.y = c.getGreen() / 255f;
+		v.z = c.getBlue() / 255f;
+		v.w = c.getAlpha() / 255f;
+		UploadVec4(name, v);
 	}
 
 }
