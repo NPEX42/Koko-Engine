@@ -46,16 +46,16 @@ public class EventSystem {
 	
 	public  static void RegisterCloseHandler(ICloseHandler handler) {
 		closeHandlers.add(handler);
-		EngineLogger.coreLogger.info("Added Close Handler (0x"+BaseConverter.toHexString(closeHandlers.size(), 4)+")");
+		//EngineLogger.coreLogger.info("Added Close Handler (0x"+BaseConverter.toHexString(closeHandlers.size(), 4)+")");
 	}
 	
 	public static void RegisterResizeHandler(IResizeHandler handler) {
 		resizeHandlers.add(handler);
-		EngineLogger.coreLogger.info("Added Resize Handler (0x"+BaseConverter.toHexString(resizeHandlers.size(), 4)+")");
+		//EngineLogger.coreLogger.info("Added Resize Handler (0x"+BaseConverter.toHexString(resizeHandlers.size(), 4)+")");
 	}
 	
 	public static void RegisterCustomHandler(ICustomHandler handler) {
 		customHandlers.add(handler);
-		EngineLogger.coreLogger.info("Added Custom Handler (0x"+BaseConverter.toHexString(customHandlers.size(), 4)+")");
+		//EngineLogger.coreLogger.info("Added Custom Handler (0x"+BaseConverter.toHexString(customHandlers.size(), 4)+")");
 	}
 }
