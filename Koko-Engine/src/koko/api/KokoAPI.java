@@ -124,6 +124,10 @@ public abstract class KokoAPI {
 		rendering.UploadPerspectiveProj(aspect, fovy, near, far);
 	}
 	
+	public void SetOrthoProj(float width, float height, float near, float far) {
+		rendering.UploadOrthoProj(width, height, near, far);
+	}
+	
 	public void SetTransform(float x, float y, float z) {
 		rendering.UploadTransform(x,y,z,0,0,0,1,1,1);
 	}

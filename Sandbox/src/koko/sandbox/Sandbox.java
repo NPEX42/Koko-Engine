@@ -25,13 +25,13 @@ public class Sandbox extends KokoApp {
 	@Override
 	public boolean OnUpdate(float ts) {
 		Background(Color.getHSBColor((float) (theta - 3.14) / 10f, 1, 1));
-		SetTransform(0, 0, -200f, 0,theta,0, 100, 100, 0);
-		yellow.tint = Color.getHSBColor(theta / 10f, 1, 1);
-		UploadMaterial(yellow);
-		theta += .00314f;
+//		SetTransform(0, 0, -200f, 0,theta,0, 100, 100, 0);
+//		yellow.tint = Color.getHSBColor(theta / 10f, 1, 1);
+//		UploadMaterial(yellow);
+//		theta += .00314f;
 		DrawMeshData(cube);
 		
-		LogInfo("Time Step: "+ts);
+		//LogInfo("Time Step: "+ts);
 		
 		return true;
 	}
@@ -45,11 +45,14 @@ public class Sandbox extends KokoApp {
 	@Override
 	public boolean OnCreate() {
 		LoadShader("assets/shaders/basic.v", "assets/shaders/basic.f");
-		UploadPerspectiveProj(ScreenAspect(), 70f, 0.3f, 1000f);
-		SetTransform(0, 0, -100f);
+		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1, -1);
+		SetTransform(0, 0, 0f, 10, 10, 0);
+		UploadMaterial(yellow);
 		RegisterResizeEventHandler(this::OnWindowResize);
+		cube = new MeshData();
 		
-		cube = LoadOBJ("assets/models/monkey.obj");
+		cube.positions = vertices;
+		cube.triangles = tris;
 		
 		return true;
 	}
@@ -67,7 +70,7 @@ public class Sandbox extends KokoApp {
 	}
 	
 	public void OnWindowResize(int w, int h) {
-		UploadPerspectiveProj(ScreenAspect(), 70f, 0.3f, 1000f);
+		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1, -1);
 	} 
 
 

@@ -112,4 +112,9 @@ public class GL4Renderer implements IRenderer {
 		vao.Delete();
 	}
 
+	@Override
+	public void SetOrthographic(float width, float height, float near, float far) {
+		shader.UploadMat4(Shader.KOKO_UNIFORM_PROJ, new Matrix4f().ortho(0, width, height, 0, near, far));
+	}
+
 }

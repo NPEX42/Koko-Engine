@@ -44,5 +44,9 @@ public class RenderingManager extends RenderingAPI {
 	protected void DrawArrays(float[] positions) {
 		renderer.Draw(positions);
 	}
+	@Override
+	protected void UploadOrthoProj(float width, float height, float near, float far) {
+		renderer.SetOrthographic(width, height, near, far);
+	}
 
 }

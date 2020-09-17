@@ -26,4 +26,6 @@ public abstract class RenderingAPI {
 
 	protected abstract void DrawArrays(float[] positions);
 
+	protected abstract void UploadOrthoProj(float width, float height, float near, float far);
+
 }

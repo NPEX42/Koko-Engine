@@ -18,7 +18,7 @@
 		<link>
 			<name>Vendor</name>
 			<type>2</type>
-			<locationURI>WORKSPACE_LOC/Vendor</locationURI>
+			<locationURI>PROJECT_LOC/Vendor</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

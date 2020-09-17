@@ -18,4 +18,6 @@ public interface IRenderer {
 	public void SetTransform(float x, float y, float z, float xr, float yr, float zr, float xs, float ys, float zs);
 
 	public void Draw(float[] positions);
+
+	public void SetOrthographic(float width, float height, float near, float far);
 }
