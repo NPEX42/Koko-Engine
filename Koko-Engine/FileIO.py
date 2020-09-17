@@ -20,7 +20,7 @@ fileList = open("Files.txt","w+");
 for f in files:
     fileList.write(f)
     fileList.write("\n");
-    os.system("javac -cp ../Vendor/* -sourcepath src/ -d ./bin "+str(f))
+    os.system("javac -cp .;../Vendor/* -sourcepath src/ -d ./bin "+str(f))
     bar.next();
 fileList.close();
 bar.finish();

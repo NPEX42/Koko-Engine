@@ -58,7 +58,7 @@ public class ObjLoader {
 				}
 			}
 			
-			if(line.startsWith("f")) { //Face / Triangle
+			if(line.startsWith("f ")) { //Face / Triangle
 				String[] indices = line.split("[\\s/]+");
 				
 				int pos1Idx = Integer.parseInt(indices[1]);
