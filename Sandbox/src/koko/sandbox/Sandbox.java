@@ -44,8 +44,8 @@ public class Sandbox extends KokoApp {
 	MeshData cube;
 	@Override
 	public boolean OnCreate() {
-		LoadShader("assets/shaders/basic.v", "assets/shaders/basic.f");
-		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1, -1);
+		LoadShader("assets/shaders/basic-es.v", "assets/shaders/basic-es.f");
+		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1, -1000);
 		SetTransform(0, 0, 0f, 10, 10, 0);
 		UploadMaterial(yellow);
 		RegisterResizeEventHandler(this::OnWindowResize);
@@ -70,7 +70,7 @@ public class Sandbox extends KokoApp {
 	}
 	
 	public void OnWindowResize(int w, int h) {
-		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1, -1);
+		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1,-1000);
 	} 
 
 

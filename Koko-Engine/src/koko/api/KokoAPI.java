@@ -9,13 +9,15 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.graalvm.compiler.replacements.InstanceOfSnippetsTemplates.MaterializationUsageReplacer;
 import org.jsfml.window.event.Event;
 
 import koko.events.EventSystem;
 import koko.events.ICloseHandler;
 import koko.events.IResizeHandler;
-
+/**
+ * @author Npex42
+ * @version 0.5.0-alpha
+ */
 public abstract class KokoAPI {
 	private RenderingAPI rendering;
 	private DisplayAPI display;
@@ -36,6 +38,12 @@ public abstract class KokoAPI {
 		}
 	}
 	
+	/**
+	 * @param width - The Width of the window to create
+	 * @param height - The Height of the window to create
+	 * @param title - The Title of the window to create
+	 * @param vsync - Limit the framerate to every v-blank
+	 */
 	public void Init(int width, int height, String title, boolean vsync) {
 		display = DisplayManager.INSTANCE;
 		logger.info("Creating Window...");
@@ -46,6 +54,9 @@ public abstract class KokoAPI {
 		GameLoop();
 	}
 	
+	/**
+	 * Called once, Goes into a loop until the window is closed.
+	 */
 	private void GameLoop() {
 		if(!OnCreate()) { display.DestroyDisplay(); System.exit(1); }
 		long tp1, tp2 = 0;
@@ -65,6 +76,14 @@ public abstract class KokoAPI {
 		display.DestroyDisplay();
 	}
 	
+	/**
+	 * Initializes a GLFW Window
+	 * 
+	 * @param width - The Width of the window to create
+	 * @param height - The Height of the window to create
+	 * @param title - The Title of the window to create
+	 * @param vsync - Limit the framerate to every v-blank
+	 */
 	public void InitGLFW(int width, int height, String title, boolean vsync) {
 		display = DisplayManager.INSTANCE;
 		display.CreateDisplay_GLFW(width, height, title, vsync);
@@ -72,6 +91,13 @@ public abstract class KokoAPI {
 		GameLoop();
 	}
 	
+	/**
+	 * Initializes a SFML Window
+	 * @param width - The Width of the window to create
+	 * @param height - The Height of the window to create
+	 * @param title - The Title of the window to create
+	 * @param vsync - Limit the framerate to every v-blank
+	 */
 	public void InitSFML(int width, int height, String title, boolean vsync) {
 		display = DisplayManager.INSTANCE;
 		display.CreateDisplay_SFML(width, height, title, vsync);
@@ -96,6 +122,7 @@ public abstract class KokoAPI {
 		}
 	}
 	
+	@Deprecated
 	public MeshData LoadOBJ(String path) {
 		try {
 			return ObjLoader.LoadFromStream(new FileInputStream(path));

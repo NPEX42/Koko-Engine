@@ -3,7 +3,10 @@ package koko.api;
 import koko.display.Window;
 import koko.display.WindowFactory;
 import koko.events.EventSystem;
-
+/**
+ * @author Npex42
+ * @version 0.5.0-alpha
+ */
 public class DisplayManager extends DisplayAPI {
 	
 	private int width, height;
