@@ -3,8 +3,8 @@ import static org.lwjgl.glfw.GLFW.*;
 import org.apache.log4j.Logger;
 import org.lwjgl.opengl.GL;
 
-import koko.api.RenderingAPI;
 import koko.events.EventSystem;
+import koko.rendering.RenderingAPI;
 import koko.api.HostWindowType;
 public class GLFW_Window extends Window {
 	private static final Logger logger = Logger.getLogger(GLFW_Window.class);

@@ -8,8 +8,8 @@ import org.jsfml.window.WindowStyle;
 import org.jsfml.window.event.Event;
 import org.lwjgl.opengl.GL;
 
-import koko.api.RenderingAPI;
 import koko.events.EventSystem;
+import koko.rendering.RenderingAPI;
 import koko.api.HostWindowType;
 
 public class JSFML_Window extends Window {

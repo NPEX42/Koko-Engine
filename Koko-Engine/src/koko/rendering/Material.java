@@ -1,4 +1,4 @@
-package koko.api;
+package koko.rendering;
 
 import java.awt.Color;
 

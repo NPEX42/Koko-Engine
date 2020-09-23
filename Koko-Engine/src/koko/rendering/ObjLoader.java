@@ -1,4 +1,4 @@
-package koko.api;
+package koko.rendering;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.joml.*;
 
+import koko.api.DoNotUse;
+import koko.api.EngineLogger;
 import np.core.IO;
 
 public class ObjLoader {

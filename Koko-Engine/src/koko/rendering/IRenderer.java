@@ -1,7 +1,5 @@
 package koko.rendering;
 
-import koko.api.Material;
-
 public interface IRenderer {
 	public void ClearColor(float r, float g, float b, float a);
 

@@ -1,4 +1,4 @@
-package koko.api;
+package koko.rendering;
 
 public class MeshData {
 	public float[] positions, texCoords, normals;

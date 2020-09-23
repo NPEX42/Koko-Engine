@@ -13,6 +13,10 @@ import org.apache.log4j.PropertyConfigurator;
 import koko.events.EventSystem;
 import koko.events.ICloseHandler;
 import koko.events.IResizeHandler;
+import koko.rendering.Material;
+import koko.rendering.MeshData;
+import koko.rendering.ObjLoader;
+import koko.rendering.RenderingAPI;
 /**
  * @author Npex42
  * @version 0.5.0-alpha

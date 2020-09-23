@@ -4,7 +4,6 @@ import static org.lwjgl.opengl.GL46.*;
 import org.joml.Matrix4f;
 
 import koko.api.EngineLogger;
-import koko.api.Material;
 import koko.events.EventSystem;
 import koko.opengl.GLIndexBuffer;
 import koko.opengl.GLShader;

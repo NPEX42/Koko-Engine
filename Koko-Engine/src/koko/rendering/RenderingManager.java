@@ -1,12 +1,8 @@
-package koko.api;
+package koko.rendering;
 
 import java.awt.Color;
 
 import org.joml.Matrix4f;
-
-import koko.rendering.IRenderer;
-import koko.rendering.RendererFactory;
-import koko.rendering.Shader;
 
 public class RenderingManager extends RenderingAPI {
 	IRenderer renderer = RendererFactory.Construct();
@@ -20,35 +16,35 @@ public class RenderingManager extends RenderingAPI {
 		);
 	}
 	@Override
-	protected void Draw(float[] vertices, int[] triangles) {
+	public void Draw(float[] vertices, int[] triangles) {
 		renderer.Draw(vertices, triangles);
 	}
 	@Override
-	protected void LoadShader(String vertexPath, String fragmentPath) {
+	public void LoadShader(String vertexPath, String fragmentPath) {
 		renderer.SetActiveShader(vertexPath,fragmentPath);
 	}
 	@Override
-	protected String GetRendererVersion() {
+	public String GetRendererVersion() {
 		return renderer.GetRendererVersion();
 	}
 	@Override
-	protected void UploadMaterial(Material mat) {
+	public void UploadMaterial(Material mat) {
 		renderer.UploadMaterial(mat);
 	}
 	@Override
-	protected void UploadPerspectiveProj(float aspect, float fovy, float near, float far) {
+	public void UploadPerspectiveProj(float aspect, float fovy, float near, float far) {
 		renderer.SetPerspective(aspect, fovy, near, far);
 	}
 	@Override
-	protected void UploadTransform(float x, float y, float z, float xr, float yr, float zr, float xs, float ys, float zs) {
+	public void UploadTransform(float x, float y, float z, float xr, float yr, float zr, float xs, float ys, float zs) {
 		renderer.SetTransform(x,y,z,xr,yr,zr,xs,ys,zs);
 	}
 	@Override
-	protected void DrawArrays(float[] positions) {
+	public void DrawArrays(float[] positions) {
 		renderer.Draw(positions);
 	}
 	@Override
-	protected void UploadOrthoProj(float width, float height, float near, float far) {
+	public void UploadOrthoProj(float width, float height, float near, float far) {
 		renderer.SetOrthographic(width, height, near, far);
 	}
 	

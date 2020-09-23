@@ -3,8 +3,8 @@ package koko.sandbox;
 import java.awt.Color;
 
 import koko.api.KokoApp;
-import koko.api.Material;
-import koko.api.MeshData;
+import koko.rendering.Material;
+import koko.rendering.MeshData;
 
 public class Sandbox extends KokoApp {
 	private float[] vertices = {
