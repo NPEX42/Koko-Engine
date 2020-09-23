@@ -9,7 +9,6 @@ import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.jsfml.window.event.Event;
 
 import koko.events.EventSystem;
 import koko.events.ICloseHandler;
@@ -165,6 +164,10 @@ public abstract class KokoAPI {
 	
 	public void SetTransform(float x, float y, float z, float xr, float yr, float zr, float xs, float ys, float zs) {
 		rendering.UploadTransform(x,y,z,xr,yr,zr,xs,ys,zs);
+	}
+	
+	public void UseIdentityProj() {
+		rendering.SetIdentityProj();
 	}
 	
 	public void LogInfo(String message) {

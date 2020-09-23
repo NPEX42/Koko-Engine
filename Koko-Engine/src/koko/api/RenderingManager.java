@@ -2,8 +2,11 @@ package koko.api;
 
 import java.awt.Color;
 
+import org.joml.Matrix4f;
+
 import koko.rendering.IRenderer;
 import koko.rendering.RendererFactory;
+import koko.rendering.Shader;
 
 public class RenderingManager extends RenderingAPI {
 	IRenderer renderer = RendererFactory.Construct();
@@ -47,6 +50,11 @@ public class RenderingManager extends RenderingAPI {
 	@Override
 	protected void UploadOrthoProj(float width, float height, float near, float far) {
 		renderer.SetOrthographic(width, height, near, far);
+	}
+	
+	@Override
+	public void SetIdentityProj() {
+		renderer.SetIdentityProj();
 	}
 
 }

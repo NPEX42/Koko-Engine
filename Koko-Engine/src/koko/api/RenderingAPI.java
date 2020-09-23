@@ -28,4 +28,9 @@ public abstract class RenderingAPI {
 
 	protected abstract void UploadOrthoProj(float width, float height, float near, float far);
 
+	public void SetIdentityProj() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

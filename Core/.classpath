@@ -6,6 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/Koko-Engine/Vendor/Ini4j/ini4j-0.5.4.jar"/>
+	<classpathentry kind="lib" path="/Koko-Engine/Vendor/ini4j-0.5.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

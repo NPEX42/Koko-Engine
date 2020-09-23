@@ -1,7 +1,6 @@
 package np.core;
 
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.Iterator;
 
 public class BitStream implements Iterable<Integer> {

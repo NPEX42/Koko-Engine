@@ -1,7 +1,6 @@
 package koko.display;
 import static org.lwjgl.glfw.GLFW.*;
 import org.apache.log4j.Logger;
-import org.jsfml.window.event.Event;
 import org.lwjgl.opengl.GL;
 
 import koko.api.RenderingAPI;

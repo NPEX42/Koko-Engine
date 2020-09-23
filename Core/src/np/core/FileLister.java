@@ -12,7 +12,7 @@ public class FileLister {
 		consumer.Consume(parentDir);
 		return files;
 	}
-	
+	@SuppressWarnings("unused")
 	public static void ConsumeFile(File file) {
 		if(file.isDirectory()) {
 			for(File f : file.listFiles(new FileFilter() {

@@ -4,6 +4,7 @@ import java.util.Stack;
 
 public class CustomEvent<T> {
 	protected String name;
+	@SuppressWarnings("unused")
 	private int ID;
 	
 	public CustomEvent(String name) {

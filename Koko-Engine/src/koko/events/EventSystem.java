@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import koko.api.EngineLogger;
-import np.core.BaseConverter;
 
 public class EventSystem {
 	

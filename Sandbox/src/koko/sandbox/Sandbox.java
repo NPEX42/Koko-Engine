@@ -5,7 +5,6 @@ import java.awt.Color;
 import koko.api.KokoApp;
 import koko.api.Material;
 import koko.api.MeshData;
-import koko.events.EventSystem;
 
 public class Sandbox extends KokoApp {
 	private float[] vertices = {
@@ -25,13 +24,7 @@ public class Sandbox extends KokoApp {
 	@Override
 	public boolean OnUpdate(float ts) {
 		Background(Color.getHSBColor((float) (theta - 3.14) / 10f, 1, 1));
-//		SetTransform(0, 0, -200f, 0,theta,0, 100, 100, 0);
-//		yellow.tint = Color.getHSBColor(theta / 10f, 1, 1);
-//		UploadMaterial(yellow);
-//		theta += .00314f;
 		DrawMeshData(cube);
-		
-		//LogInfo("Time Step: "+ts);
 		
 		return true;
 	}
@@ -44,9 +37,9 @@ public class Sandbox extends KokoApp {
 	MeshData cube;
 	@Override
 	public boolean OnCreate() {
-		LoadShader("assets/shaders/basic-es.v", "assets/shaders/basic-es.f");
-		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1, -1000);
-		SetTransform(0, 0, 0f, 10, 10, 0);
+		LoadShader("assets/shaders/basic.v", "assets/shaders/basic.f");
+		UseIdentityProj();
+		SetTransform(0, 0, 0f, 0, 0, 0);
 		UploadMaterial(yellow);
 		RegisterResizeEventHandler(this::OnWindowResize);
 		cube = new MeshData();
@@ -70,7 +63,7 @@ public class Sandbox extends KokoApp {
 	}
 	
 	public void OnWindowResize(int w, int h) {
-		SetOrthoProj(ScreenWidth(), ScreenHeight(), 1,-1000);
+		//SetOrthoProj(ScreenWidth(), ScreenHeight(), 1,-1000);
 	} 
 
 

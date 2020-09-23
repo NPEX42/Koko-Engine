@@ -20,4 +20,6 @@ public interface IRenderer {
 	public void Draw(float[] positions);
 
 	public void SetOrthographic(float width, float height, float near, float far);
+
+	void SetIdentityProj();
 }
